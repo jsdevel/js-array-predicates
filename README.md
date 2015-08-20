@@ -19,14 +19,14 @@ someArray.filter(byProp('foo'));
 ```
 ## Available predicates
 
-### .byProp
+### .byProp(prop)
 
 Matches array items that have the property
 
 ```javascript
 someArray.filter(byProp('foo'));
 ```
-### .byPropVal
+### .byPropVal(prop, value)
 
 Matches array items that have a property value loosely matching value.
 
@@ -34,7 +34,7 @@ Matches array items that have a property value loosely matching value.
 someArray.filter(byPropVal('foo', 5));
 someArray.filter(byPropVal('foo', '5'));// returns the same items as before.
 ```
-### .byPropValue
+### .byPropValue(prop, value)
 
 Matches array items that have a property value exactly matching value.
 
@@ -42,7 +42,22 @@ Matches array items that have a property value exactly matching value.
 someArray.filter(byPropValue('foo', 5));
 someArray.filter(byPropValue('foo', '5'));// returns different items frome before.
 ```
+### .byVal(value)
 
+Matches array items that loosely match value.
+
+```javascript
+someArray.filter(byVal(5));
+someArray.filter(byVal('5'));// returns the same items as before.
+```
+### .byValue(value)
+
+Matches array items that exactly match value.
+
+```javascript
+someArray.filter(byValue(5));
+someArray.filter(byValue('5'));// returns different items frome before.
+```
 ##LICENSE
 ``````
 The MIT License (MIT)
