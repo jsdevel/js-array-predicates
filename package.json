@@ -1,7 +1,7 @@
 {
   "name": "array-predicates",
   "main": "index.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Predicates that make working with js arrays easier.",
   "author": "Joseph Spencer",
   "scripts": {
