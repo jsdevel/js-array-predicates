@@ -1,0 +1,32 @@
+{
+  "name": "array-predicates",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Predicates that make working with js arrays easier.",
+  "author": "Joseph Spencer",
+  "scripts": {
+    "pretest": "jshint lib && jshint --config ./test/.jshintrc test",
+    "cover": "istanbul cover _mocha -- ./test/**/*.specs.js && cat ./coverage/lcov.info | coveralls -v && rm -rf coverage",
+    "test": "mocha -w ./test/**/*.specs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsdevel/js-array-predicates.git"
+  },
+  "keywords": [],
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsdevel/js-array-predicates/issues"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.3.18",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "require-dir": "^0.3.0"
+  }
+}
