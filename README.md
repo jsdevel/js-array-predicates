@@ -83,9 +83,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ``````
 
-[downloads-image]: http://img.shields.io/npm/dm/js-array-predicates.svg
-[npm-url]: https://npmjs.org/package/js-array-predicates
-[npm-image]: http://img.shields.io/npm/v/js-array-predicates.svg
+[downloads-image]: http://img.shields.io/npm/dm/array-predicates.svg
+[npm-url]: https://npmjs.org/package/array-predicates
+[npm-image]: http://img.shields.io/npm/v/array-predicates.svg
 
 [travis-url]: https://travis-ci.org/jsdevel/js-array-predicates
 [travis-image]: http://img.shields.io/travis/jsdevel/js-array-predicates.svg
