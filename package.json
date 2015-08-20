@@ -5,7 +5,7 @@
   "description": "Predicates that make working with js arrays easier.",
   "author": "Joseph Spencer",
   "scripts": {
-    "pretest": "jshint lib && jshint --config ./test/.jshintrc test",
+    "pretest": "jshint *.js && jshint --config ./test/.jshintrc test",
     "cover": "istanbul cover _mocha -- ./test/**/*.specs.js && cat ./coverage/lcov.info | coveralls -v && rm -rf coverage",
     "test": "mocha -w ./test/**/*.specs.js"
   },
@@ -26,7 +26,5 @@
     "jshint": "^2.8.0",
     "mocha": "^2.2.5"
   },
-  "dependencies": {
-    "require-dir": "^0.3.0"
-  }
+  "dependencies": {}
 }

@@ -6,6 +6,8 @@ describe('js-array-predicates', function(){
   var byProp = require('../byProp');
   var byPropVal = require('../byPropVal');
   var byPropValue = require('../byPropValue');
+  var byVal = require('../byVal');
+  var byValue = require('../byValue');
 
   beforeEach(function() {
     arr = [{foo: 5}, {boo: 6}];
@@ -15,6 +17,8 @@ describe('js-array-predicates', function(){
     p.byProp.should.equal(byProp);
     p.byPropVal.should.equal(byPropVal);
     p.byPropValue.should.equal(byPropValue);
+    p.byVal.should.equal(byVal);
+    p.byValue.should.equal(byValue);
   });
 
   describe('.byProp()', function() {
@@ -39,6 +43,24 @@ describe('js-array-predicates', function(){
       matches.length.should.equal(0);
       matches = arr.filter(byPropValue('foo', 5));
       matches[0].foo.should.eql(arr[0].foo);
+    });
+  });
+
+  describe('.byVal', function() {
+    it('should loosely match', function() {
+      arr = [5, 4];
+      var matches = arr.filter(byVal('5'));
+      matches.length.should.equal(1);
+      matches[0].should.eql(arr[0]);
+    });
+  });
+
+  describe('.byValue', function() {
+    it('should exactly match', function() {
+      var matches = arr.filter(byValue('5'));
+      matches.length.should.equal(0);
+      matches = arr.filter(byValue(arr[0]));
+      matches[0].should.eql(arr[0]);
     });
   });
 });
